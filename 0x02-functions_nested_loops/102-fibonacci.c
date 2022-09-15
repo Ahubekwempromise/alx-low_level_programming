@@ -1,4 +1,4 @@
-#include <stdio.h.>
+#include <stdio.h>
 
 /**
  * main - entry point
@@ -6,21 +6,18 @@
  * Return: Always 0
  */
 int main(void)
-	int count;
-	unsigned long fib1 = 0, fib2 = 1, sum;
+{
+	long int n, a = 1, b = 1, s;
 
-	for (count = 0; count < 50; count++)
+	printf("%ld", a);
+	for (n = 1; n < 50; ++n)
 	{
-		sum = fib1 + fib2;
-		printf("%lu", sum);
-
-		fib1 =fib2;
-		fib2 = sum;
-
-		if (count == 49)
-			printf("\n");
-		else
-			printf(",");
+		s = a + b;
+		printf(", %ld", s);
+		a = b;
+		b = s;
 	}
+	putchar(10);
+
 	return (0);
 }
